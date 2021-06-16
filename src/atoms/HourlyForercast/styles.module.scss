@@ -1,0 +1,27 @@
+.currentBlock {
+	background: rgba(200,230,201 ,1);
+	padding: 20px;
+}
+
+h5 {
+	padding: 20px 0;
+}
+
+.minutelyHeader {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.time {
+	font-size: 14px;
+}
+.temperature {
+	font-size: 14px;
+	color: rgba(233,30,99 ,1);
+}
