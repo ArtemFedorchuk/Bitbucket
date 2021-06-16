@@ -13,8 +13,6 @@ const HistoricalWeather = () => {
   const dispatch = useDispatch();
   const historicalWeather = useSelector((state) => state.weather.historicalWeather);
 
-  console.log('historicalWeather ->> ', historicalWeather)
-
   useEffect(() => {
     let arrDate = Array(5)
       .fill(0)
