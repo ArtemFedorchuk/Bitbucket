@@ -8,7 +8,6 @@ import { WeatherChart } from '../../atoms';
 
 
 const SearchField = () => {
-  const [data, setData] = useState([]);
   const [inpText, setInpText] = useState('');
   const dispatch = useDispatch();
 
@@ -17,7 +16,6 @@ const SearchField = () => {
     try {
       const fetchSixteenWeather = async () => {
         const response = await Axios.get(`forecast/daily?q=${inpText}&cnt=${days}&appid=${API_KEY}`);
-        setData(response.data);
         dispatch(setDataChart(response.data))
       };
 
@@ -40,13 +38,12 @@ const SearchField = () => {
           dispatch(setDataChart(response.data))
         }
       };
+
       fetchHourlyWeather()
     }catch (e) {
       console.log(e)
     }
   }, [dispatch]);
-
-  console.log(data);
 
   return (
     <div>
