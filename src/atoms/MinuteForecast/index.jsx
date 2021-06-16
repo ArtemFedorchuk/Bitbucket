@@ -46,9 +46,10 @@ const MinuteForecust = () => {
                 <div className={styles.time}>
                   {DateFormater(dt, "Asia/Kolkata")}
                 </div>
-                {precipitation === 0 && (
+                {precipitation === 0 ? (
                   <p className={styles.mm}>0</p>
-                )}
+                ) :
+                ( <p className={styles.mm}>{Number(precipitation).toFixed(1)}</p>)}
               </div>
             </Row>
           )) :
